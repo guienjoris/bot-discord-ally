@@ -1,0 +1,20 @@
+{
+  "name": "bot-discord-lotr",
+  "version": "1.0.0",
+  "description": "bot discord for manage message and play musique",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "bot",
+    "discord"
+  ],
+  "author": "Shinryu",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.1.1",
+    "dotenv": "^8.2.0"
+  }
+}
