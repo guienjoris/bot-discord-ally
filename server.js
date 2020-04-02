@@ -7,8 +7,9 @@ bot.on('ready',()=>{
 })
 
 bot.on('message', message =>{
-    let args = message.content.split('!vote ')
-    if(message.content === `!vote ${args[1]}`){
+    let argsVote = message.content.split('!vote ')
+    let args = message.content.split(' ');
+    if(message.content === `!vote ${argsVote[1]}`){
         message.react('👍')
         .then(()=>{message.react('👎' )})
         .then(()=>{message.pin()})     
@@ -25,6 +26,26 @@ bot.on('message', message =>{
             .then(messages => console.log(`Bulk deleted ${messages.size} messages`))
             .catch(console.error)
     }
+    for(let i=0;i< args.length;i++){
+        if(args[i] === 'GG'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/putain_il_est_fort_ce_con.mp3'));
+        }
+        if(args[i] === 'Win'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/pignouf.mp3'));
+        }
+        if(args[i] === 'roulettes'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/a_roulettes.mp3'));
+        }
+        if(args[i] === 'incandescent'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/incandescent.mp3'));
+        }
+        if(args[i] === 'Wonder'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/les_femmes_jaime_pas_ca_c_est_de_la_saloperie.mp3'));
+        }
+        if(args[i] === 'cons'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/cest_qui_tout_ces_cons.mp3'));
+        }
+    }
 })
 
 bot.on('guildMemberAdd', member => {
@@ -33,4 +54,4 @@ bot.on('guildMemberAdd', member => {
     }).catch(console.error)
   })
 
-bot.login(`${process.env.DISCORD_TOKEN}`)
+bot.login()
