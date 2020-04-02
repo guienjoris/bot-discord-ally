@@ -27,23 +27,38 @@ bot.on('message', message =>{
             .catch(console.error)
     }
     for(let i=0;i< args.length;i++){
-        if(args[i] === 'GG'){
-            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/putain_il_est_fort_ce_con.mp3'));
+        if(args[i] === 'GG' || args[i] === 'Gg'){
+            message.channel.send(new discord.MessageAttachment('https://cdn.discordapp.com/attachments/417716629036728320/695255236553474049/00029.gif'));
         }
         if(args[i] === 'pignouf'){
-            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/pignouf.mp3'));
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/pignouf.gif'));
         }
-        if(args[i] === 'roulettes'){
-            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/a_roulettes.mp3'));
+        if(args[i] === 'merde'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/merde.gif'));
         }
-        if(args[i] === 'graal'){
-            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/incandescent.mp3'));
+        if(args[i] === 'révolte'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/revolte.gif'));
         }
-        if(args[i] === 'femme'){
-            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/les_femmes_jaime_pas_ca_c_est_de_la_saloperie.mp3'));
+        if(args[i] === 'arthur' || args[i] === 'Arthur'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/arthour.gif'));
+        }
+        if(args[i] === 'conne'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/conne.gif'));
         }
         if(args[i] === 'cons'){
-            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/cest_qui_tout_ces_cons.mp3'));
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/cons.gif'));
+        }
+        if(args[i] === 'con'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/con.gif'));
+        }
+        if(args[i] === 'connard'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/connard.gif'));
+        }
+        if(args[i] === 'merci'){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/merci.gif'));
+        }
+        if(args[i] === "\\o/"){
+            message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/woohoo.gif'));
         }
     }
 })
