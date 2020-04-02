@@ -30,16 +30,16 @@ bot.on('message', message =>{
         if(args[i] === 'GG'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/putain_il_est_fort_ce_con.mp3'));
         }
-        if(args[i] === 'Win'){
+        if(args[i] === 'pignouf'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/pignouf.mp3'));
         }
         if(args[i] === 'roulettes'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/a_roulettes.mp3'));
         }
-        if(args[i] === 'incandescent'){
+        if(args[i] === 'graal'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/incandescent.mp3'));
         }
-        if(args[i] === 'Wonder'){
+        if(args[i] === 'femme'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/les_femmes_jaime_pas_ca_c_est_de_la_saloperie.mp3'));
         }
         if(args[i] === 'cons'){
@@ -54,4 +54,4 @@ bot.on('guildMemberAdd', member => {
     }).catch(console.error)
   })
 
-bot.login()
+bot.login("")
