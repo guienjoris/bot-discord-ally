@@ -17,9 +17,10 @@ bot.on('message', message =>{
         .then(()=>{message.react('👎' )})
         .then(()=>{message.pin()})     
     }
-    if(message.content === `!help bot-ally` ){
+    if(message.content === `!command` ){
         message.reply(`\`!vote + votre question\` pour voter 
-        \`ping\` pour avoir un pong! `)
+        \`ping\` pour avoir un pong!
+        \`!calc + votre calcul (ex: 50+50/2*5+150+150.5)\` pour calculer! `)
     }
     if(message.content=== 'ping'){
         message.reply('pong !')
