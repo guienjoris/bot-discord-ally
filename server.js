@@ -5,9 +5,12 @@ const bot = new discord.Client();
 bot.on('ready',()=>{
     console.log("Je suis connecté!")
 })
-
+function calc(exp){
+    return new Function('return' + exp)();
+}
 bot.on('message', message =>{
     let argsVote = message.content.split('!vote ')
+    let argsMath = message.content.split('!calc ')
     let args = message.content.split(' ');
     if(message.content === `!vote ${argsVote[1]}`){
         message.react('👍')
@@ -54,12 +57,15 @@ bot.on('message', message =>{
         if(args[i] === 'connard'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/connard.gif'));
         }
-        if(args[i] === 'merci'){
+        if(args[i] === 'merci'||args[i] === 'Merci' || args[i] === 'MERCI'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/merci.gif'));
         }
         if(args[i] === "\\o/"){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/woohoo.gif'));
         }
+    }
+    if(message.content === `!calc ${argsMath[1]}`){
+        message.reply(eval(argsMath[1]));
     }
 })
 
