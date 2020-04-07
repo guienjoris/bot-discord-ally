@@ -65,7 +65,7 @@ bot.on('message', message =>{
         }
     }
     if(message.content === `!calc ${argsMath[1]}`){
-        message.reply(eval(argsMath[1]));
+        message.reply(`\`${eval(argsMath[1])}\``);
     }
 })
 
