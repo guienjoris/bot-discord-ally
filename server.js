@@ -5,9 +5,7 @@ const bot = new discord.Client();
 bot.on('ready',()=>{
     console.log("Je suis connecté!")
 })
-function calc(exp){
-    return new Function('return' + exp)();
-}
+
 bot.on('message', message =>{
     let argsVote = message.content.split('!vote ')
     let argsMath = message.content.split('!calc ')
@@ -15,15 +13,21 @@ bot.on('message', message =>{
     if(message.content === `!vote ${argsVote[1]}`){
         message.react('👍')
         .then(()=>{message.react('👎' )})
-        .then(()=>{message.pin()})     
+        .then(()=>{message.pin()})
+        .catch(console.error)     
     }
     if(message.content === `!command` ){
         message.reply(`\`!vote + votre question\` pour voter 
         \`ping\` pour avoir un pong!
         \`!calc + votre calcul (ex: 50+50/2*5+150+150.5)\` pour calculer! `)
+        .catch(console.error) 
     }
-    if(message.content=== 'ping'){
-        message.reply('pong !')
+    if(message.content === "!command gif"){
+        message.reply(
+            "\n`GG ou Gg`,\n`pignouf`,\n`merde`,\n`révolte ou revolte`,\n`arthur ou Arthur`, \n`conne`,\n`cons`,\n`con`,\n`connard`,\n`merci ou Merci ou MERCI`,\n`\\o/`"
+        )
+        .catch(console.error) 
+
     }
     if(message.content === "!clean"){
         message.channel.bulkDelete(100)
@@ -31,16 +35,20 @@ bot.on('message', message =>{
             .catch(console.error)
     }
     for(let i=0;i< args.length;i++){
+        if(args[i]=== 'ping'){
+            message.reply('pong !')
+            .catch(console.error) 
+        }
         if(args[i] === 'GG' || args[i] === 'Gg'){
             message.channel.send(new discord.MessageAttachment('https://cdn.discordapp.com/attachments/417716629036728320/695255236553474049/00029.gif'));
         }
-        if(args[i] === 'pignouf'){
+        if(args[i] === 'pignouf' || args[i] === 'Pignouf'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/pignouf.gif'));
         }
-        if(args[i] === 'merde'){
+        if(args[i] === 'merde' || args[i] === 'Merde'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/merde.gif'));
         }
-        if(args[i] === 'révolte'){
+        if(args[i] === 'révolte' || args[i]=== "revolte"){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/revolte.gif'));
         }
         if(args[i] === 'arthur' || args[i] === 'Arthur'){
@@ -66,7 +74,8 @@ bot.on('message', message =>{
         }
     }
     if(message.content === `!calc ${argsMath[1]}`){
-        message.reply(`\`${eval(argsMath[1])}\``);
+        message.reply(`\`${eval(argsMath[1])}\``)
+        .catch(console.error) 
     }
 })
 
