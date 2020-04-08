@@ -25,7 +25,7 @@ bot.on('message', message =>{
     }
     if(message.content === "!command gif"){
         message.reply(
-            "\n`GG ou Gg`,\n`pignouf`,\n`merde`,\n`révolte ou revolte`,\n`arthur ou Arthur`, \n`conne`,\n`cons`,\n`con`,\n`connard`,\n`merci ou Merci ou MERCI`,\n`\\o/`"
+            "\n`GG ou Gg`,\n`pignouf`,\n`merde`,\n`révolte ou revolte`,\n`arthur ou Arthur`, \n`conne`,\n`cons`,\n`con`,\n`connard ou connards`,\n`merci ou Merci ou MERCI`,\n`\\o/`"
         )
         .catch(console.error) 
 
@@ -72,7 +72,7 @@ bot.on('message', message =>{
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/con.gif'))
             .catch(console.error)
         }
-        if(args[i] === 'connard'){
+        if(args[i] === 'connard' || args[i] === 'connards'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/connard.gif'))
             .catch(console.error)
         }
