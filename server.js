@@ -1,7 +1,7 @@
 const dotenv = require('dotenv').config({path: 'private.env'})
 const discord = require('discord.js')
 const quiz = require('./quiz/quiz.json');
-const item = quiz[Math.floor(Math.random() * quiz.length)];
+let item = quiz[Math.floor(Math.random() * quiz.length)];
 const filter = response => {
 	return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
 };
@@ -10,7 +10,9 @@ bot.on('ready',()=>{
     console.log("Je suis connecté!")
 })
 
-
+function rebootQuiz(){
+    item = quiz[Math.floor(Math.random() * quiz.length)];
+}
 
 
 bot.on('message', message =>{
@@ -21,12 +23,18 @@ bot.on('message', message =>{
         message.channel.send(item.question).then(() => {
             message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
                 .then(collected => {
-                    message.channel.send(`${collected.first().author} a la bonne réponse!`);
+                    message.channel.send(`${collected.first().author} a la bonne réponse avec ${item.answers[0]} !`)
+                    .then(()=>{
+                        rebootQuiz();
+                    })
                 })
                 .catch(collected => {
                     message.channel.send('Personne a trouvé la réponse dans le temps imparti');
                 });
         });
+    }
+    if(message.content === "!quiz ignore"){
+        rebootQuiz();
     }
     if(message.content === `!vote ${argsVote[1]}`){
         message.react('👍')
@@ -117,4 +125,4 @@ bot.on('guildMemberAdd', member => {
     }).catch(console.error)
   })
 
-bot.login("Njk0ODQ2ODEwNTg5NjI2NDMw.XoRk9g.aN6VlWZ8AZQZIw-KhFkKzbqoK-E")
+bot.login("")
