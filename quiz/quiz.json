@@ -1,0 +1,10 @@
+[
+	{
+		"question": "Quel est le nom de famille d'Arthur?",
+		"answers": ["Pendragon","pendragon"]
+	},
+	{
+		"question": "Qui est le beau-père du roi?",
+		"answers": ["Leodagan","Léodagan","Lionel Astier"]
+	}
+]

@@ -1,15 +1,33 @@
 const dotenv = require('dotenv').config({path: 'private.env'})
 const discord = require('discord.js')
-
+const quiz = require('./quiz/quiz.json');
+const item = quiz[Math.floor(Math.random() * quiz.length)];
+const filter = response => {
+	return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
+};
 const bot = new discord.Client();
 bot.on('ready',()=>{
     console.log("Je suis connecté!")
 })
 
+
+
+
 bot.on('message', message =>{
     let argsVote = message.content.split('!vote ')
     let argsMath = message.content.split('!calc ')
     let args = message.content.split(' ');
+    if(message.content === "!quiz"){
+        message.channel.send(item.question).then(() => {
+            message.channel.awaitMessages(filter, { max: 1, time: 30000, errors: ['time'] })
+                .then(collected => {
+                    message.channel.send(`${collected.first().author} a la bonne réponse!`);
+                })
+                .catch(collected => {
+                    message.channel.send('Personne a trouvé la réponse dans le temps imparti');
+                });
+        });
+    }
     if(message.content === `!vote ${argsVote[1]}`){
         message.react('👍')
         .then(()=>{message.react('👎' )})
@@ -20,7 +38,9 @@ bot.on('message', message =>{
         message.reply(`\`!vote + votre question\` pour voter 
         \`ping\` pour avoir un pong!
         \`!calc + votre calcul (ex: 50+50/2*5+150+150.5)\` pour calculer! 
-        \`!command gif \` pour avoir les commandes des gifs`)
+        \`!command gif \` pour avoir les commandes des gifs
+        \`!quiz \` pour lancer une question aléatoire
+        `)
         .catch(console.error) 
     }
     if(message.content === "!command gif"){
@@ -97,4 +117,4 @@ bot.on('guildMemberAdd', member => {
     }).catch(console.error)
   })
 
-bot.login("")
+bot.login("Njk0ODQ2ODEwNTg5NjI2NDMw.XoRk9g.aN6VlWZ8AZQZIw-KhFkKzbqoK-E")
