@@ -26,7 +26,7 @@
 	},
 	{
 		"question": "Ce qu'Arthur appelle l'ennemi, le seigneur Galessin l'appelle ...?",
-		"answers": ["Loth"]
+		"answers": ["Loth","Le roi loth","le roi loth"]
 	},
 	{
 		"question": "Où se rend le seigneur Dagonet pour avoir des renseignement sur le Graal ?",
@@ -75,7 +75,7 @@
 	},
 	{
 		"question":"Quelle était la couleur de la langue du père du roi Loth quand il l'a mortellement étranglé ?",
-		"answers": ["Bleue outre-mer"]
+		"answers": ["Bleue outre-mer","bleu","bleue"]
 	}
 	,
 	{
@@ -89,7 +89,7 @@
 	,
 	{
 		"question":"Dans le compotier de la grand mère à Karadoc que reste t-il comme odeur ?",
-		"answers": ["Purée de cerise"]
+		"answers": ["Purée de cerise","puree de cerise"]
 	},
 	{
 		"question":"En quel siècle se passe l'histoire ?",
