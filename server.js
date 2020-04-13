@@ -54,11 +54,12 @@ bot.on('message', message =>{
         .catch(console.error)     
     }
     if(message.content === `!command` ){
-        message.reply(`\`!vote + votre question\` pour voter 
-        \`ping\` pour avoir un pong!
-        \`!calc + votre calcul (ex: 50+50/2*5+150+150.5)\` pour calculer! 
-        \`!command gif \` pour avoir les commandes des gifs
-        \`!quiz \` pour lancer une question aléatoire
+        message.reply(`\`!vote + votre question\` pour voter \n
+        \`ping\` pour avoir un pong! \n
+        \`!calc + votre calcul (ex: 50+50/2*5+150+150.5)\` pour calculer! \n
+        \`!command gif \` pour avoir les commandes des gifs \n
+        \`!quiz \` pour lancer une question aléatoire \n
+        \`!quote \` pour avoir une quote de manière aléatoire \n
         `)
         .catch(console.error) 
     }
