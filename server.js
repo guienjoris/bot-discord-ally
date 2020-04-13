@@ -1,7 +1,9 @@
 const dotenv = require('dotenv').config({path: 'private.env'})
 const discord = require('discord.js')
 const quiz = require('./quiz/quiz.json');
+const quote = require('./quiz/quotes.json');
 let item = quiz[Math.floor(Math.random() * quiz.length)];
+let itemQuote = quote.quotes[Math.floor(Math.random() * quote.quotes.length)]
 const filter = response => {
 	return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
 };
@@ -13,7 +15,9 @@ bot.on('ready',()=>{
 function rebootQuiz(){
     item = quiz[Math.floor(Math.random() * quiz.length)];
 }
-
+function randomQuote(){
+    itemQuote = quote.quotes[Math.floor(Math.random() * quote.quotes.length)]
+}
 
 bot.on('message', message =>{
     let argsVote = message.content.split('!vote ')
@@ -35,6 +39,13 @@ bot.on('message', message =>{
     }
     if(message.content === "!quiz ignore"){
         rebootQuiz();
+    }
+    if(message.content === '!quote'){
+        console.log(itemQuote);
+        message.reply(`${itemQuote.quote.text} - ${itemQuote.author}`)
+        .then(()=>{
+            return randomQuote()
+        });
     }
     if(message.content === `!vote ${argsVote[1]}`){
         message.react('👍')
