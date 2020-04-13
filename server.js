@@ -42,7 +42,7 @@ bot.on('message', message =>{
     }
     if(message.content === '!quote'){
         console.log(itemQuote);
-        message.reply(`${itemQuote.quote.text} - ${itemQuote.author}`)
+        message.reply(`${itemQuote.quote.text} \n - ${itemQuote.author} -`)
         .then(()=>{
             return randomQuote()
         });
