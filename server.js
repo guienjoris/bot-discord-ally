@@ -45,7 +45,8 @@ bot.on('message', message =>{
         message.reply(`${itemQuote.quote.text} \n - ${itemQuote.author} -`)
         .then(()=>{
             return randomQuote()
-        });
+        })
+        .catch(console.error);
     }
     if(message.content === `!vote ${argsVote[1]}`){
         message.react('👍')
