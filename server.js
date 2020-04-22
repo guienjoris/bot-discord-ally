@@ -66,7 +66,7 @@ bot.on('message', message =>{
     }
     if(message.content === "!command gif"){
         message.reply(
-            "\n`GG ou Gg`,\n`pignouf`,\n`merde`,\n`révolte ou revolte`,\n`arthur ou Arthur`, \n`conne`,\n`cons`,\n`con`,\n`connard ou connards`,\n`merci ou Merci ou MERCI`,\n`\\o/`"
+            "\n`!GG ou !Gg`,\n`!pignouf`,\n`!merde`,\n`!révolte ou !revolte`,\n`!arthur ou !Arthur`, \n`!conne`,\n`!cons`,\n`!con`,\n`!connard ou !connards`,\n`!merci ou !Merci ou !MERCI`,\n`!\\o/`"
         )
         .catch(console.error) 
 
@@ -81,47 +81,47 @@ bot.on('message', message =>{
             message.reply('pong !')
             .catch(console.error) 
         }
-        if(args[i] === 'GG' || args[i] === 'Gg'){
+        if(args[i] === '!GG' || args[i] === '!Gg'){
             message.channel.send(new discord.MessageAttachment('https://cdn.discordapp.com/attachments/417716629036728320/695255236553474049/00029.gif'))
             .catch(console.error) 
         }
-        if(args[i] === 'pignouf' || args[i] === 'Pignouf'){
+        if(args[i] === '!pignouf' || args[i] === '!Pignouf'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/pignouf.gif'))
             .catch(console.error) 
         }
-        if(args[i] === 'merde' || args[i] === 'Merde'){
+        if(args[i] === '!merde' || args[i] === '!Merde'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/merde.gif'))
             .catch(console.error)
         }
-        if(args[i] === 'révolte' || args[i]=== "revolte"){
+        if(args[i] === '!révolte' || args[i]=== "!revolte"){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/revolte.gif'))
             .catch(console.error)
         }
-        if(args[i] === 'arthur' || args[i] === 'Arthur'){
+        if(args[i] === '!arthur' || args[i] === '!Arthur'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/arthour.gif'))
             .catch(console.error)
         }
-        if(args[i] === 'conne'){
+        if(args[i] === '!conne'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/conne.gif'))
             .catch(console.error)
         }
-        if(args[i] === 'cons'){
+        if(args[i] === '!cons'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/cons.gif'))
             .catch(console.error)
         }
-        if(args[i] === 'con'){
+        if(args[i] === '!con'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/con.gif'))
             .catch(console.error)
         }
-        if(args[i] === 'connard' || args[i] === 'connards'){
+        if(args[i] === '!connard' || args[i] === '!connards'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/connard.gif'))
             .catch(console.error)
         }
-        if(args[i] === 'merci'|| args[i] === 'Merci' || args[i] === 'MERCI'){
+        if(args[i] === '!merci'|| args[i] === '!Merci' || args[i] === '!MERCI'){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/merci.gif'))
             .catch(console.error)
         }
-        if(args[i] === "\\o/"){
+        if(args[i] === "!\\o/"){
             message.channel.send(new discord.MessageAttachment('./Projets/JS-Vanilla/bot-discord-lotr/media/woohoo.gif'))
             .catch(console.error)
         }
