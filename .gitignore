@@ -9,7 +9,7 @@
 
 # dependencies
 /node_modules
-./private.env
+private.env
 
 # profiling files
 chrome-profiler-events*.json
