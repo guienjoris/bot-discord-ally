@@ -1,0 +1,115 @@
+[
+	{
+		"question": "Quel est le nom de famille d'Arthur?",
+		"answers": ["Pendragon","pendragon"]
+	},
+	{
+		"question": "Qui est le beau-père du roi?",
+		"answers": ["Leodagan","Léodagan","Lionel Astier"]
+	}
+	,
+	{
+		"question": "Comment s'appelle le roi Viking?",
+		"answers": ["Sven"]
+	},
+	{
+		"question": "Combien de fois Perceval oublie le parchemeiin qui déclenche le sort d'appel du chaudron rutilant?",
+		"answers": ["2"]
+	},
+	{
+		"question": "Qui provoque nos héros à la balle, en les insultant de pédale s'ils ne viennent pas?",
+		"answers": ["Les calédoniens","les caledoniens","caledoniens"]
+	},
+	{
+		"question": "Qui était le premier 'disciple' de la Dame du Lac, avant Arthur?",
+		"answers": ["Lancelot"]
+	},
+	{
+		"question": "Ce qu'Arthur appelle l'ennemi, le seigneur Galessin l'appelle ...?",
+		"answers": ["Loth","Le roi loth","le roi loth"]
+	},
+	{
+		"question": "Où se rend le seigneur Dagonet pour avoir des renseignement sur le Graal ?",
+		"answers": ["Judée"]
+	}
+	,
+	{
+		"question": "Ou se trouve le deuxième siège de transport ? ( avant que perceval le ramene )",
+		"answers": ["dans une taverne dans le languedoc","languedoc", "taverne languedoc"]
+	},
+	{
+		"question": "Combien de pièces d'or Dame Ygerne demande au minimum pour la 'fête aux pécores' de Tintagel ( fêtes paysannes) ?",
+		"answers": ["2000"]
+	},
+	{
+		"question": "Avec qui était marié Dame Ygerne quand Pandragon a pris l'apparence de cette personne pour la séduire ? ( Naissance d'arthur ) ?",
+		"answers": ["Le duc de Gorlet","duc de gorlet"]
+	},
+	{
+		"question": "Combien Arthur rachète le petit 'peigne en argent' de sa femme ?",
+		"answers": ["4 pièces de bronze","4 pieces de bronze"]
+	},
+	{
+		"question": "Comment s'appelle et quel est l'animal que l'on offre à Arthur ?",
+		"answers": ["Ferme ta gueule, le bouc","ferme ta gueule bouc"]
+	},
+	{
+		"question":"Alors qu'il reste Gauvain, Bohort et Karadoc en cellule enfermé par Lancelot, combien ce dernier dit-il qu'il en reste (ça va vous avez compris) ?",
+		"answers": ["0"]
+	},
+	{
+		"question":"Combien les pictes on donné d'argent à Léodagan pour qu'il garde Dame Selly  ?",
+		"answers": ["20 000","20000"]
+	},
+	{
+		"question":"Pourquoi Perceval ne dit plus la date de son anniversaire ?",
+		"answers": ["Parce que personne ne lui souhaitait"]
+	},
+	{
+		"question":"Qui dit : ' mi-ours, mi-scorpion et re mi-ours derrière ' ?",
+		"answers": ["Grudu"]
+	},
+	{
+		"question":"Quels sont les animaux en lesquels Merlin peut se transformer (du moins ceux que l'on sait dans la série) ?",
+		"answers": ["Chat, araignée, chouette","araignée, chat, chouette","chouette, chat, araignée"]
+	},
+	{
+		"question":"Quelle était la couleur de la langue du père du roi Loth quand il l'a mortellement étranglé ?",
+		"answers": ["Bleue outre-mer","bleu","bleue"]
+	}
+	,
+	{
+		"question":"Combien d'enfant a Azénor ?",
+		"answers": ["4"]
+	},
+	{
+		"question":"Combien de chèvres a tué Léodagan quand il était saoul (anecdote avec le maître d'arme) ?",
+		"answers": ["76"]
+	}
+	,
+	{
+		"question":"Dans le compotier de la grand mère à Karadoc que reste t-il comme odeur ?",
+		"answers": ["Purée de cerise","puree de cerise"]
+	},
+	{
+		"question":"En quel siècle se passe l'histoire ?",
+		"answers": ["5","5eme"]
+	},
+	{
+		"question":"Comment s'appelle la Pythie, ancienne amie d'Arthur ?",
+		"answers": ["Prisca"]
+	},
+	{
+		"question":"Qui fait voeu de pénitence ?",
+		"answers": ["herve de rinel","hervé","herve"]
+	}
+	,
+	{
+		"question":"Qui est l'Homme-goujon ?",
+		"answers": ["Urgan"]
+	},
+	{
+		"question":"Comment s'appelle l'évêque homosexuel ?",
+		"answers": ["Boniface"]
+	}
+]
