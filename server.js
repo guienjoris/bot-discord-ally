@@ -138,4 +138,4 @@ bot.on('guildMemberAdd', member => {
     }).catch(console.error)
   })
 
-bot.login("Njk0ODQ2ODEwNTg5NjI2NDMw.Xo8G_A.svqqjNpolKs_CfDJ4zHoEFJySJg")
+bot.login(process.env.DISCORD_TOKEN)
