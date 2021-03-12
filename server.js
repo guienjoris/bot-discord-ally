@@ -1,7 +1,5 @@
 const dotenv = require('dotenv').config({path: '.env'})
-const express = require("express");
-const app = express();
-const cors = require("cors");
+
 
 const discord = require('discord.js')
 const quiz = require('./quiz/quiz.json');
@@ -11,12 +9,7 @@ let itemQuote = quote.quotes[Math.floor(Math.random() * quote.quotes.length)]
 const filter = response => {
 	return item.answers.some(answer => answer.toLowerCase() === response.content.toLowerCase());
 };
-app.use(cors());
 
-app.get("/", (req, res) => {
-    res.status(200).json("Bot launch");
-  });
-  app.listen(3000)
 const bot = new discord.Client();
 bot.on('ready',()=>{
     console.log("Je suis connecté!")
