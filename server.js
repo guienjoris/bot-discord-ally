@@ -83,7 +83,7 @@ bot.on("message", (message) => {
               ignoreDoctype: true,
               attributesKey: "attributes",
             });
-            const arrayPlanet = jsonObjStats.playerData.planets.planet.map(
+            const arrayPlanet = jsonObjStats?.playerData?.planets?.planet.map(
               (item) => {
                 return {
                   name: item?.attributes?.name,
@@ -131,14 +131,17 @@ bot.on("message", (message) => {
               code: true,
             });
           },
-          () => {
+          (err) => {
+            console.log(err);
+
             message.reply(
               "Il y a eu une erreur vérifiez que le pseudo soit bon"
             );
           }
         );
       },
-      () => {
+      (err) => {
+        console.log(err);
         message.reply("Il y a eu une erreur vérifiez que le pseudo soit bon");
       }
     );
