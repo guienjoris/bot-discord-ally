@@ -96,27 +96,31 @@ bot.on("message", (message) => {
             const formatObject = {
               points: {
                 totalPoints: {
-                  points:
-                    jsonObjStats.playerData.positions.position[0].attributes
-                      .score,
+                  points: jsonObjStats.playerData.positions.position[0].attributes.score.replace(
+                    /\B(?=(\d{3})+(?!\d))/g,
+                    "."
+                  ),
                   classements: `${jsonObjStats.playerData.positions.position[0]._text} ème`,
                 },
                 economie: {
-                  points:
-                    jsonObjStats.playerData.positions.position[1].attributes
-                      .score,
+                  points: jsonObjStats.playerData.positions.position[1].attributes.score.replace(
+                    /\B(?=(\d{3})+(?!\d))/g,
+                    "."
+                  ),
                   classements: `${jsonObjStats.playerData.positions.position[1]._text} ème`,
                 },
                 recherche: {
-                  points:
-                    jsonObjStats.playerData.positions.position[2].attributes
-                      .score,
+                  points: jsonObjStats.playerData.positions.position[2].attributes.score.replace(
+                    /\B(?=(\d{3})+(?!\d))/g,
+                    "."
+                  ),
                   classements: `${jsonObjStats.playerData.positions.position[2]._text} ème`,
                 },
                 militaire: {
-                  points:
-                    jsonObjStats.playerData.positions.position[3].attributes
-                      .score,
+                  points: jsonObjStats.playerData.positions.position[3].attributes.score.replace(
+                    /\B(?=(\d{3})+(?!\d))/g,
+                    "."
+                  ),
                   classements: `${jsonObjStats.playerData.positions.position[3]._text} ème`,
                 },
               },
