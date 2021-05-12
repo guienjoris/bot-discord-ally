@@ -96,31 +96,35 @@ bot.on("message", (message) => {
             const formatObject = {
               points: {
                 totalPoints: {
-                  points: jsonObjStats.playerData.positions.position[0].attributes.score.replace(
-                    /\B(?=(\d{3})+(?!\d))/g,
-                    "."
-                  ),
+                  points:
+                    jsonObjStats.playerData.positions.position[0].attributes.score.replace(
+                      /\B(?=(\d{3})+(?!\d))/g,
+                      "."
+                    ),
                   classements: `${jsonObjStats.playerData.positions.position[0]._text} ème`,
                 },
                 economie: {
-                  points: jsonObjStats.playerData.positions.position[1].attributes.score.replace(
-                    /\B(?=(\d{3})+(?!\d))/g,
-                    "."
-                  ),
+                  points:
+                    jsonObjStats.playerData.positions.position[1].attributes.score.replace(
+                      /\B(?=(\d{3})+(?!\d))/g,
+                      "."
+                    ),
                   classements: `${jsonObjStats.playerData.positions.position[1]._text} ème`,
                 },
                 recherche: {
-                  points: jsonObjStats.playerData.positions.position[2].attributes.score.replace(
-                    /\B(?=(\d{3})+(?!\d))/g,
-                    "."
-                  ),
+                  points:
+                    jsonObjStats.playerData.positions.position[2].attributes.score.replace(
+                      /\B(?=(\d{3})+(?!\d))/g,
+                      "."
+                    ),
                   classements: `${jsonObjStats.playerData.positions.position[2]._text} ème`,
                 },
                 militaire: {
-                  points: jsonObjStats.playerData.positions.position[3].attributes.score.replace(
-                    /\B(?=(\d{3})+(?!\d))/g,
-                    "."
-                  ),
+                  points:
+                    jsonObjStats.playerData.positions.position[3].attributes.score.replace(
+                      /\B(?=(\d{3})+(?!\d))/g,
+                      "."
+                    ),
                   classements: `${jsonObjStats.playerData.positions.position[3]._text} ème`,
                 },
               },
@@ -210,22 +214,25 @@ bot.on("message", (message) => {
         )
         .catch(console.error);
     }
-    if (args[i] === "!pignouf" || args[i] === "!Pignouf") {
+    if (args[i].toLowerCase() === "!pignouf") {
       message.channel
         .send(new discord.MessageAttachment("./media/pignouf.gif"))
         .catch(console.error);
     }
-    if (args[i] === "!merde" || args[i] === "!Merde") {
+    if (args[i].toLowerCase() === "!merde") {
       message.channel
         .send(new discord.MessageAttachment("./media/merde.gif"))
         .catch(console.error);
     }
-    if (args[i] === "!révolte" || args[i] === "!revolte") {
+    if (
+      args[i].toLowerCase() === "!révolte" ||
+      args[i].toLowerCase() === "!revolte"
+    ) {
       message.channel
         .send(new discord.MessageAttachment("./media/revolte.gif"))
         .catch(console.error);
     }
-    if (args[i] === "!arthur" || args[i] === "!Arthur") {
+    if (args[i].toLowerCase() === "!arthur") {
       message.channel
         .send(new discord.MessageAttachment("./media/arthour.gif"))
         .catch(console.error);
