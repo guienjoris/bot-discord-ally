@@ -205,7 +205,7 @@ bot.on("message", (message) => {
     if (args[i] === "ping") {
       message.reply("pong !").catch(console.error);
     }
-    if (args[i] === "!GG" || args[i] === "!Gg") {
+    if (args[i].toLowerCase() === "!gg") {
       message.channel
         .send(
           new discord.MessageAttachment(
@@ -265,6 +265,11 @@ bot.on("message", (message) => {
     if (args[i] === "!\\o/") {
       message.channel
         .send(new discord.MessageAttachment("./media/woohoo.gif"))
+        .catch(console.error);
+    }
+    if (args[i].toLowerCase() === "!bernard") {
+      message.channel
+        .send(new discord.MessageAttachment("./media/bernard.gif"))
         .catch(console.error);
     }
   }
