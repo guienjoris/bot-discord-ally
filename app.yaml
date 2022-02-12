@@ -1,5 +1,2 @@
 runtime: nodejs16
 service: bot-discord-ogame
-env_variables:
-  DISCORD_URL: "https://discordapp.com/oauth2/authorize?client_id=694846810589626430&scope=bot&permissions=8"
-  DISCORD_TOKEN: "Njk0ODQ2ODEwNTg5NjI2NDMw.XoRkhQ.SOEU_5IvEoxNXCbYLZFqyoBJIcY"
