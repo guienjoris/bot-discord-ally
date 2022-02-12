@@ -2,8 +2,11 @@ const dotenv = require("dotenv").config({ path: ".env" });
 const axios = require("axios").default;
 const convert = require("xml-js");
 const iconvlite = require("iconv-lite");
+const { token } = require("./config.json");
 
 const discord = require("discord.js");
+const { Client, Intents } = require("discord.js");
+
 const quiz = require("./quiz/quiz.json");
 const quote = require("./quiz/quotes.json");
 let item = quiz[Math.floor(Math.random() * quiz.length)];
@@ -14,8 +17,10 @@ const filter = (response) => {
   );
 };
 
-const bot = new discord.Client();
-bot.on("ready", () => {
+const bot = new discord.Client({
+  intents: [Intents.FLAGS.GUILDS],
+});
+bot.once("ready", () => {
   console.log("Je suis connecté!");
 });
 
@@ -26,7 +31,32 @@ function randomQuote() {
   itemQuote = quote.quotes[Math.floor(Math.random() * quote.quotes.length)];
 }
 
-bot.on("message", (message) => {
+bot.on("interactionCreate", async (interaction) => {
+  console.log({ interaction });
+
+  if (!interaction.isCommand()) return;
+  const { commandName } = interaction;
+  if (commandName === "test") {
+    await interaction.reply("Pong!");
+  }
+  if (commandName === "quiz") {
+    interaction.reply(item.question, { fetchReply: true }).then(() => {
+      interaction.channel
+        .awaitMessages({ filter, max: 1, time: 30000, errors: ["time"] })
+        .then((collected) => {
+          interaction.followUp(
+            `${collected.first().author} a la bonne réponse!`
+          );
+        })
+        .catch((collected) => {
+          interaction.followUp(
+            "Personne a donner de réponse dans le temps imparti"
+          );
+        });
+    });
+  }
+});
+/* bot.on("message", (message) => {
   let argsVote = message.content.split("!vote ");
   let argsMath = message.content.split("!calc ");
   const argsStats = message.content.split("!data ")[1];
@@ -54,7 +84,6 @@ bot.on("message", (message) => {
     });
   }
   if (message.content === `!data ${argsStats}`) {
-    /* const {data:idPlayer} = async ()=> await axios.get("https://s149-fr.ogame.gameforge.com/api/players.xml",{Accept: 'application/xml',responseType: 'text'}); */
     axios({
       method: "get",
       url: "https://s149-fr.ogame.gameforge.com/api/players.xml",
@@ -277,7 +306,7 @@ bot.on("message", (message) => {
     message.reply(`\`${eval(argsMath[1])}\``).catch(console.error);
   }
 });
-
+ */
 bot.on("guildMemberAdd", (member) => {
   member
     .createDM()
@@ -287,4 +316,4 @@ bot.on("guildMemberAdd", (member) => {
     .catch(console.error);
 });
 
-bot.login(process.env.DISCORD_TOKEN);
+bot.login(token);
